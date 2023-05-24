@@ -1,11 +1,12 @@
 import "./NavBar.css"
 import CartWidget from "../CartWidget/CartWidget"
+import { Link, NavLink } from "react-router-dom"
 
 const NavBar = () => {
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
-                <a className="navbar-brand" href="#">Futbol Factory</a>
+                <Link className="navbar-brand" to={"/"}>Futbol Factory</Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon" />
                 </button>
@@ -16,9 +17,15 @@ const NavBar = () => {
                                 Botines
                             </div>
                             <ul className="dropdown-menu">
-                                <li className="dropdown-item">Adidas</li>
-                                <li className="dropdown-item">Nike</li>
-                                <li className="dropdown-item">Puma</li>
+                                <li>
+                                    <NavLink className="dropdown-item" to={`/categoria/botines-adidas`}>Adidas</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink className="dropdown-item" to={`/categoria/botines-nike`}>Nike</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink className="dropdown-item" to={`/categoria/botines-puma`}>Puma</NavLink>
+                                </li>
                             </ul>
                         </li>
                         <li className="nav-item dropdown">
@@ -26,10 +33,18 @@ const NavBar = () => {
                                 Camisetas
                             </div>
                             <ul className="dropdown-menu">
-                                <li className="dropdown-item">Liga Argentina</li>
-                                <li className="dropdown-item">Liga Española</li>
-                                <li className="dropdown-item">Liga Inglesa</li>
-                                <li className="dropdown-item">Selecciones</li>
+                                <li>
+                                    <NavLink className="dropdown-item" to={`/categoria/liga-argentina`}>Liga Argentina</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink className="dropdown-item" to={`/categoria/liga-espanola`}>Liga Española</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink className="dropdown-item" to={`/categoria/liga-inglesa`}>Liga Inglesa</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink className="dropdown-item" to={`/categoria/selecciones`}>Selecciones</NavLink>
+                                </li>
                             </ul>
                         </li>
                         <li className="nav-item dropdown">
@@ -37,9 +52,15 @@ const NavBar = () => {
                                 Accesorios
                             </div>
                             <ul className="dropdown-menu">
-                                <li className="dropdown-item">Pelotas</li>
-                                <li className="dropdown-item">Guantes</li>
-                                <li className="dropdown-item">Protecciones</li>
+                                <li>
+                                    <NavLink className="dropdown-item" to={`/categoria/pelotas`}>Pelotas</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink className="dropdown-item" to={`/categoria/guantes`}>Guantes</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink className="dropdown-item" to={`/categoria/protecciones`}>Protecciones</NavLink>
+                                </li>
                             </ul>
                         </li>
                     </ul>
